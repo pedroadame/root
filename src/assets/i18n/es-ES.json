@@ -1,7 +1,7 @@
 {
   "App": {
-    "NavTitle": "Reglas y Facciones (5ª Ed.USA)",
-    "NavTitleShort": "Reglas (5ª Ed.USA)",
+    "NavTitle": "Reglas y Facciones (6ª Ed.USA)",
+    "NavTitleShort": "Reglas (6ª Ed.USA)",
     "RootPrefix": "La ley de",
     "SearchPlaceholder": "Buscar reglas",
     "Titles": {
@@ -9,9 +9,9 @@
       "FAQ": "Preguntas Frecuentes",
       "Reach": "Calculadora de Alcance y Selección de Facciones",
       "Map": "Generador de Mapa",
-      "Random": "Random Setup",
+      "Random": "Preparación Aleatoria",
       "DraftPlusOne": "+1 Draft",
-      "AdSet": "Advanced Setup"
+      "AdSet": "Preparación Avanzada"
     }
   },
   "Modal": {
@@ -29,11 +29,11 @@
       "CloseButton": "Cerrar",
       "Choose": "Elegir nuevas Facciones",
       "DraftPlusOne": "Draft +1",
-      "Error": "Unable to select factions; please adjust selections and try again.",
+      "Error": "No se pudo hacer una selección de facciones; por favor reajusta los parámetros e inténtalo de nuevo.",
       "Factions": {
         "Marquise de Cat": "El Marquesado",
-        "Lord of the Hundreds": "Lord of the Hundreds",
-        "Keepers in Iron": "Keepers in Iron",
+        "Lord of the Hundreds": "El Señor de los Cientos",
+        "Keepers in Iron": "Los Guardianes de Hierro",
         "Underground Duchy": "El Ducado Subterráneo",
         "Eyrie Dynasties": "El Nido de Águilas",
         "Vagabond (#1)": "Vagabundo (#1)",
@@ -45,8 +45,8 @@
       },
       "FactionsShort": {
         "Marquise": "El Marquesado",
-        "Hundreds": "Hundreds",
-        "Keepers": "Keepers",
+        "Hundreds": "Los Cientos",
+        "Keepers": "Los Guardianes",
         "Duchy": "El Ducado",
         "Eyrie": "El Nido",
         "Vagabond #1": "Vagabundo #1",
@@ -94,25 +94,25 @@
         }
       },
       "Adset": {
-        "Random": "Random",
-        "Random1": "Random (1)",
-        "Random2": "Random (2)",
-        "Generate": "Generate",
-        "None": "None",
-        "Waiting": "Waiting for random generation...",
-        "Players": "Players",
+        "Random": "Aleatorio",
+        "Random1": "Aleatorio (1)",
+        "Random2": "Aleatorio (2)",
+        "Generate": "Generar",
+        "None": "Ninguno",
+        "Waiting": "Esperando aleatorización...",
+        "Players": "Jugadores",
         "Choices": {
-          "Map": "Map Choice",
-          "Deck": "Deck Choice",
-          "Players": "Player Count",
-          "Landmarks": "Landmarks",
-          "Hirelings": "Valid Hirelings",
-          "Factions": "Valid Factions",
-          "RemindDrawFive": "Reminder: Deal 5 cards to each player."
+          "Map": "Elección de Mapa",
+          "Deck": "Elección de Mazo",
+          "Players": "Número de Jugadores",
+          "Landmarks": "Lugares Míticos",
+          "Hirelings": "Secuaces Válidos",
+          "Factions": "Facciones Válidas",
+          "RemindDrawFive": "Recordatorio: Reparte 5 cartas a cada jugador."
         },
         "Deck": {
-          "Standard": "Standard Deck",
-          "EP": "Exiles & Partisans"
+          "Standard": "Mazo estándar",
+          "EP": "Exiliados y Partisanos"
         },
         "Landmarks": {
           "ElderTreetop": "Elder Treetop",
@@ -123,32 +123,32 @@
           "TheTower": "The Tower"
         },
         "Hirelings": {
-          "Spring Uprising (R)": "Spring Uprising (R)",
-          "Forest Patrol (R)": "Forest Patrol (R)",
-          "Last Dynasty (R)": "Last Dynasty (R)",
-          "The Exile (R)": "The Exile (R)",
-          "Popular Band (R)": "Popular Band (R)",
-          "Furious Protector (R)": "Furious Protector (R)",
-          "Highway Bandits (R)": "Highway Bandits (R)",
-          "Riverfolk Flotilla (R)": "Riverfolk Flotilla (R)",
-          "Warm Sun Prophets (R)": "Warm Sun Prophets (R)",
-          "Sunward Expedition (R)": "Sunward Expedition (R)",
-          "Corvid Spies (R)": "Corvid Spies (R)",
-          "Flame Bearers (R)": "Flame Bearers (R)",
-          "Vault Keepers (R)": "Vault Keepers (R)",
-          "Rabbit Scouts (D)": "Rabbit Scouts (D)",
-          "Feline Physicians (D)": "Feline Physicians (D)",
-          "Bluebird Nobles (D)": "Bluebird Nobles (D)",
-          "The Brigand (D)": "The Brigand (D)",
-          "Street Band (D)": "Street Band (D)",
-          "Stoic Protector (D)": "Stoic Protector (D)",
-          "Bandit Gangs (D)": "Bandit Gangs (D)",
-          "Otter Divers (D)": "Otter Divers (D)",
-          "Lizard Envoys (D)": "Lizard Envoys (D)",
-          "Mole Artisans (D)": "Mole Artisans (D)",
-          "Raven Sentries (D)": "Raven Sentries (D)",
-          "Rat Smugglers (D)": "Rat Smugglers (D)",
-          "Badger Bodyguards (D)": "Badger Bodyguards (D)"
+          "Spring Uprising (R)": "Alzamiento Primaveral (A)",
+          "Forest Patrol (R)": "Patrulla Forestal (A)",
+          "Last Dynasty (R)": "Última Dinastía (A)",
+          "The Exile (R)": "El Exiliado (A)",
+          "Popular Band (R)": "Banda Popular (A)",
+          "Furious Protector (R)": "Protector Furioso (A)",
+          "Highway Bandits (R)": "Salteadores de Caminos (A)",
+          "Riverfolk Flotilla (R)": "Flotilla del Río (A)",
+          "Warm Sun Prophets (R)": "Profetas del Cálido Sol (A)",
+          "Sunward Expedition (R)": "Expedición hacia el Sol (A)",
+          "Corvid Spies (R)": "Espías Córvidos (A)",
+          "Flame Bearers (R)": "Portadores de Llamas (A)",
+          "Vault Keepers (R)": "Guardianes de las Cámaras (A)",
+          "Rabbit Scouts (D)": "Conejos Exploradores (D)",
+          "Feline Physicians (D)": "Médicos Felinos (D)",
+          "Bluebird Nobles (D)": "Nobles Azulejos (D)",
+          "The Brigand (D)": "El Forajido (D)",
+          "Street Band (D)": "Banda Callejera (D)",
+          "Stoic Protector (D)": "Protector Estoico (D)",
+          "Bandit Gangs (D)": "Cuadrillas de Bandidos (D)",
+          "Otter Divers (D)": "Nutrias Buzo (D)",
+          "Lizard Envoys (D)": "Emisarios Reptilianos (D)",
+          "Mole Artisans (D)": "Topos Artesanos (D)",
+          "Raven Sentries (D)": "Cuervos Centinela (D)",
+          "Rat Smugglers (D)": "Ratas Contrabandistas (D)",
+          "Badger Bodyguards (D)": "Tejones Guardaespaldas (D)"
         }
       }
     },
