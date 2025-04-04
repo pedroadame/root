@@ -97,96 +97,105 @@
 - name: Victoria
   color: "#000000"
   children:
-    - name: Cómo ganar
-      pretext: La primera persona en alcanzar 30 puntos de victoria gana inmediatamente la partida. Si varias personas alcanzan 30 puntos de forma simultánea, quien esté jugando su turno actual será el ganador o ganadora.
+    - name: Condición de Victoria
+      pretext: El primer jugador en alcanzar 30 puntos de victoria gana inmediatamente el juego. Si más de un jugador llega a 30 o más puntos de victoria simultáneameante, el jugador cuyo turno se esté jugando gana.
 
-    - name: Obtener puntos de victoria
-      pretext: Cada facción tiene sus formas de obtener puntos de victoria, pero todas las facciones pueden obtener puntos de victoria de las formas siguientes.
+    - name: Obtener Puntos de Victoria
+      pretext: Cada facción tiene una forma única de obtener puntos de victoria, pero cualquier facción puede obtener puntos de victoria de las formas siguientes.
       children:
         - name: Retirar Edificios y Fichas.
-          text: Por cada Edificio o Ficha que retires, obtienes 1 punto de victoria.
+          text: Cuando retires un edificio o ficha enemiga, obtienes un punto de victoria.
         - name: Fabricar Objetos.
-          text: Al fabricar un objeto (`rule:4.1`), obtienes los puntos de victoria indicados en la carta. `faction:eyrie:7.2.3`
+          text: Cuando fabriques un objeto (`rule:4.1`), obtienes el número de puntos de victoria indicados en la carta. `faction:eyrie:7.2.3` `faction:warlord:14.2.3`
 
     - name: Cartas de Dominancia
-      pretext: El mazo contiene 4 cartas de Dominancia, que permiten obtener la victoria sin al alcanzar los 30 puntos de victoria si cumples su condición.
+      pretext: El mazo contiene cuatro cartas de dominancia, que te permiten ganar la partida sin llegar a 30 puntos de victoria.
       children:
-        - name: Activación.
-          text: Durante tu Día, si tienes al menos 10 puntos de victoria, puedes **activar** una carta de Dominancia de tu mano, colocándola en tu área de juego. Si lo haces, retira tu marcador de puntos de victoria del tablero; ya no obtendrás puntos de victoria. `faction:vagabond:9.2.8`
+        - name: Activar.
+          text: Durante tu Día, si tienes al menos 10 puntos de victoria, puedes **activar** una carta de dominancia que esté en tu mano y colocarla en tu área de juego. Quita tu marcador de puntuación del contador de puntuación. Ya no puedes obtener más puntos de victoria. `faction:vagabond:9.2.8`
           subchildren:
             - name: Dominancia de Ratón, Conejo o Zorro.
-              text: Ganas la partida inmediatamente si, al inicio de tu Alba, gobiernas los tres claros del palo correspondiente a la carta de Dominancia.
+              text: Ganas inmediatamente si, al comienzo de tu Alba, gobiernas tres claros del palo correspondiente a la carta de dominancia activada.
             - name: Dominancia de Ave.
-              text: Ganas la partida inmediatamente si, al inicio de tu Alba, gobiernas dos claros de esquinas opuestas del tablero. _(Solo hay 4 esquinas; no valen todos los claros opuestos de los bordes)_.
-        - name: Cartas de Dominancia activadas.
-          text: Una carta de Dominancia activada no cuenta a efectos de tu límite de cartas en mano ni puede ser retirada de la partida. Tampoco se puede sustituir una la carta de Dominancia activada por otra diferente.
-        - name: Gastar por el palo.
-          text: Una carta de Dominancia no activada puede ser gastada por su palo, como cualquier otra carta normal. No obstante, al descartarse, esta no se coloca sobre la pila de descarte; en lugar de ello, debe colocarse junto al tablero para indicar que está **disponible** para ser reclamada. `faction:cult:10.4.2`        
-        - name: Reclamar una carta de Dominancia disponible.
-          text: Durante tu Día, puedes **reclamar** una carta de Dominancia a tu mano gastando para ello una carta del mismo palo.
+              text: Ganas inmediatamente si, al inicio de tu Alba, gobiernas dos claros de esquinas opuestas.
+        - name: Cartas activadas.
+          text: Una carta de dominancia activada no cuenta para tu límite de mano, y no puede retirarse del juego. No puedes sustituiir una carta de dominancia activada por otra diferente.
+        - name: Usar Cartas de Dominancia.
+          text: Una carta de dominancia puede gastarse por su palo. Cuando una carta de dominancia fuese a ser colocada en la pila de descartes, en vez de ahí se sitúa junto al tablero para mostrar que está **disponible** para ser tomada. `faction:cult:10.4.2`        
+        - name: Tomar Cartas Disponibles.
+          text: Durante tu Día, puedes tomar cualquierr carta de dominancia disponible y ponerla en tu mano gastando una carta del palo correspondiente. Debes gastar una carta de ave para tomar la carta de dominancia de ave.
 
 - name: Acciones Clave
   color: "#000000"
   children:
     - name: Fabricar
-      pretext: Puedes **fabricar** la mayoría de cartas de tu mano para obtener un efecto inmediato o persistente.
+      pretext: Puedes **fabricar** la mayor parte de las cartas de tu mano para obtener un efecto inmediato o persistente.
       children:
         - name: Coste.
-          text: Para fabricar una carta, debes **activar** piezas de fabricación del palo indicado en el icono de la esquina inferior izquierda de la carta. El palo de una pieza de fabricación corresponde al claro donde esté situada _(algunas facciones pueden tener mecánicas específicas para sus piezas)_. Cada pieza de fabricación puede ser activada una sola vez por turno. Un icono de fabricación tricolor con un signo de interrogación indica que se puede utilizar una pieza de fabricación de cualquier palo. `faction:vagabond:9.2.1` `faction:riverfolk:11.2.1`
-        - name: Efectos inmediatos.
-          text: Al fabricar una carta con un efecto inmediato, resuelve su efecto y luego descarta la carta. Si el efecto indica un objeto, toma dicho objeto de la reserva general del tablero y colócalo en tu zona de objetos fabricados de tu tablero de facción. Si la carta indica un objeto que ya no está disponible en la reserva, la carta no puede ser fabricada. `faction:eyrie:7.8.1` `faction:vagabond:9.5.8`
-        - name: Efectos persistentes.
-          text: Al fabricar una carta con un efecto persistente, colócala en tu área de juego. A partir de ahora, puedes hacer uso del efecto descrito en la carta.
-        - name: Sin duplicados.
-          text: No puedes fabricar un efecto persistente si ya tienes dicho efecto en tu área de juego. 
+          text: Para fabricar una carta, debes **activar** las piezas de fabricación de los palos que aparecen en la esquina inferior izquierda de la carta. Las piezas de fabricación de cada facción se indican en su sección de Fabricar. El palo de una pieza de fabricación se corresponde con su claro. Cada pieza de fabricación puede activarse una única vez por turno. Una interrogación denota una pieza de fabricación de cualquier palo. `faction:vagabond:9.2.1` `faction:riverfolk:11.2.1` `faction:cult:10.2.1`
+        - name: Efectos Inmediatos.
+          text: Cuando fabriques un efecto inmediato _(recuadro de pergamino)_, resuelve el efecto y después descarta la carta. Si muestra un objeto, toma el objeto correspondiente de la reserva común de objetos del mapa y colócalo en la de zona de objetos fabricados de tu tablero de facción. Si la carta muestra un objeto que no está en la reserva, la carta no puede fabricarse. `faction:eyrie:7.8.1` `faction:vagabond:9.5.8` `faction:warlord:14.2.1`
+        - name: Efectos Persistentes.
+          text: Cuando fabriques un efecto persistente _(recuadro de piedra)_, colócalo en tu zona de juego. Puedes usar el efecto tal y como se describe en la carta. _(El Emigrante del Nido en el mazo de Exiliados y Partisanos ers obligatorio)_.
+        - name: Sin Puplicados.
+          text: No puedes fabricar un efecto persistente si tienes uno idéntico en tu zona de juego. 
   
     - name: Mover
-      pretext: Al **mover** debes trasladar cualquier cantidad de guerreros _(siempre más que 0)_ o tu peón de un claro a otro claro adyacente.
+      pretext: Cuando **mueves**, puedes tomar cualquier número _(superior a cero)_ de tus guerreros y peones de un claro y moverlos a otro claro adyacenete.
       children:
-        - name: Debes gobernar.
-          text: Para realizar un movimiento, debes gobernar el claro de origen, el claro de destino o ambos. `faction:vagabond:9.2.3` `faction:riverfolk:11.2.2` `faction:corvid:13.2.3`
-        - name: Movimiento no limitado.
-          text: Una misma pieza puede moverse varias veces en el mismo turno. Si se te indica que muevas varias veces, puedes mover el mismo guerrero o mismo grupo de guerreros varias veces si lo deseas _(incluso realizar el mismo movimiento a la inversa)_.
+        - name: Debes Gobernar.
+          text: Para poder mover, debes gobernar el claro original, el de destino o ambos. `faction:vagabond:9.2.3` `faction:riverfolk:11.2.2` `faction:corvid:13.2.3`
+        - name: Sin Límites.
+          text: Una pieza cualquiera puede moverse cualquier número de veces por turno. Si se te pide que hagas varios movimientos, puedes mover el mismo o distintos grupos de guerreros.
 
     - name: Batallar
-      pretext: Al **batallar**, elige un claro en el que tengas guerreros o tu peón; este será el **claro de la batalla**. Tú serás el **atacante**. Elige a otra facción presente en dicho claro para que sea el **defensor**; la batalla será entre vosotros dos.
+      pretext: Cuando **batallas**, elige un claro donde tengas cualquier número de guerreros o peones como el **claro de batalla**. Tú eres el **atacante**. Elige a un enemigo en el claro de batalla que será el **defensor** _(hay al menos una de sus piezas ahí)_.
       children:
-        - name: "Paso 1: el Defensor puede emboscar."
-          text: El defensor puede jugar una sola carta de emboscada del palo correspondiente al del claro de la batalla. Si la emboscada no es truncada, el defensor inflige dos impactos de forma inmediata, y después descarta dicha carta de emboscada. En caso de que el atacante se quede sin guerreros o peones, la batalla termina inmediatamente.
+        - name: "Paso 1: El Defensor Puede Emboscar."
+          text: El defensor puede jugar una (y sólo una) carta de emboscada correspondiente al claro de la batalla. De ser así, resuelve `rule:4.3.1.1`–`rule:4.3.1.2` en orden.
           subchildren:
-            - name: Truncar emboscada.
-              text: Después de que el defensor juegue una carta de emboscada, el atacante puede responder jugando también una carta de emboscada del palo correspondiente al del claro de la batalla para cancelar su emboscada. _(El defensor debe descartar igualmente su carta de emboscada)_
-        - name: "Paso 2: Lanzar dados y sumar impactos adicionales."
-          text: Lanza ambos dados. El atacante puede causar tantos impactos como marque el valor más alto, y el defensor puede causar tantos impactos como marque el valor más bajo. Si ambos dados marcan el mismo resultado, tanto atacante como defensor pueden infligir los mismos impactos `faction:woodland:8.2.2`. _(Decimos "pueden" porque los impactos no se aplican hasta el paso 3.)_ 
+            - name: Emboscada Truncada.
+              text: El atacante puede jugar también una carta de emboscada correspondiente al claro de batalla. De ser así, ambos jugadores descartan sus cartas de emboscada sin aplicar sus efectos y se omite el paso `rule:4.3.1.2`.
+            - name: Resuelve la Emboscada.
+              text: El defensor da inmediatamente dos golpes al atacante (`rule:4.3.4`). Después, el defensor descarta la carta de emboscada. Si no quedan guerreros o peones atacantes, la batalla finaliza inmediatamente.
+        - name: "Paso 2: Tirar Dados."
+          text: Tira ambos dados. El atacante golpeará tantas veces como la tirada más alta, y el defensor golpeará tantas veces como la tirada más baja. Si las tiradas son iguales, el atacante y el defensor golpearán el mismo número de veces _(el uso del futuro aquí refleja que los golpes no se aplican hasta el paso 4)_. `faction:woodland:8.2.2`.  
           subchildren:
-            - name: Impactos máximos por dado.
-              text: El número de impactos máximos por tirada de dados que un jugador infligir está limitado por el número de guerreros presentes en el claro de la batalla, tanto si eres el atacante como el defensor. `faction:vagabond:9.2.6`
-            - name: Impactos adicionales.
-              text: Después de obtener el resultado del dado, tanto atacante como defensor pueden añadir **impactos adicionales** por medio de habilidades especiales u otros efectos que tengan en su área de juego. _(Los impactos adicionales no están limitados por el número de guerreros en el claro de la batalla.)_
+            - name: Golpes Máximos por Tirada.
+              text: El número máximo de golpes que puedes causar debido a tu tirada es igual al número de tus guerreros en el claro de batalla, ya seas el atacante o el defensor. `faction:vagabond:9.2.6`
+        - name: "Paso 3: Usar Efectos."
+          text: "El atacante y el defensor pueden usar efectos opcionales _(como la carta Tácticas Brutales)_ que afecten a la batalla. Si ambos quieren hacerlo, el atacante escoge quien los usa primero (`rule:1.1.3).
+          subchildren:
+            - name: Golpes Adicionales.
+              text: Muchos efectos causarán **golpes adicionales**, estos golpes no están limitados por el número de guerreros en el claro de batalla.
             - name: Indefenso.
-              text: Si el defensor no tiene guerreros en el claro de la batalla, el atacante infligirá un impacto adicional. `faction:vagabond:9.2.4`
-        - name: "Paso 3: Infligir impactos."
-          text: "El atacante y el defensor se infligen impactos simultáneamente. Cada impacto causado obliga a retirar una pieza. El jugador que recibe impactos debe elegir qué piezas retira del claro de la batalla, pero está obligado a retirar siempre primero todos sus guerreros antes que retirar edificios o fichas; en dicho caso, el jugador elegirá en qué orden retira estas piezas. _(Recuerda: obtienes 1 punto de victoria por edificio o ficha enemiga que retires.)_"
+              text: Si el defensor no tiene guerreros en el claro de batalla, el atacante da un golpe adicional. `faction:vagabond:9.2.4`
+        - name: "Paso 4: Recibir Golpes."
+          text: Cada golpe que da un bando retira una pieza del otro bando en el claro de batalla _(obtienes un punto de victoria por cada edificio o ficha enemiga que retires)_. El bando que recibe un golpe decide en qué orden se retiran sus piezas, aunque todos sus guerreros han de ser retirados antes de que sus edificios o fichas puedan retirarse; también escogen el orden de cualquier efecto que provoque la retirada de sus piezas.
 
-- name: Preparación
+- name: Preparación de la PArtida
   color: "#000000"
+  pretext: Si algún jugador es novato, usa la Prepacación Estándar (`rule:5.1`). Si todos habéis jugado y queréis más variedad, usad la Preparación Avanzada (`rule:16.1`). Si queréis jugar con cinco o más facciones que comienzan en claros de esquinas, tenéis que usar la Preparación Avanzada.
   children:
-    - name: Preparación estándar
+    - name: Preparación Estándar
       children:
-        - name: "Paso 1: Asignar facciones y jugador inicial"
-          text: Asigna una facción a cada jugador empleando el método que prefieras. Las combinaciones de facciones viables según el número de jugadores se describen en el el apartado "Combinaciones de facciones" (Apéndice A del Reglamento; en esta web puedes utilizar la herramienta de la calculadora). Determina el jugador inicial al azar y el orden de turno según cómo estéis sentados. Cada jugador coge el tablero y las piezas de su facción según indica el reverso del tablero de tu facción.
-        - name: "Paso 2: Colocar marcadores de puntuación."
-          text: Cada jugador coloca su contador de puntuación sobre el "0" del contador del tablero.
-        - name: "Paso 3: Mano inicial."
-          text: Si solo vais a jugar dos jugadores, retirad las 4 cartas de Dominancia del mazo. Baraja el mazo; después, cada jugador roba tres cartas _(alternativamente, robad 5 y elegid solo 3; esto es más recomendable si ya tenéis experiencia en el juego)_.
-        - name: "Paso 4: Ruinas."
-          text: Coloca las Ruinas sobre cada espacio del tablero marcado con una "R" _(cuatro en total)_.
-        - name: "Paso 5: Preparar la reserva de objetos."
-          text: "Coloca los siguientes objetos en las casillas correspondientes de la reserva de objetos de la parte superior del tablero: 2 `item:boot`, 2 `item:sack`, 1 `item:crossbow`, 1 `item:hammer`, 2 `item:sword`, 2 `item:tea`, 2 `item:coin`."
-        - name: "Paso 6: Preparar el resto de elementos."
-          text: Reparte las cartas de resumen de las facciones a petición, y coloca los 2 dados de batalla junto al mapa.
-        - name: "Paso 7: Preparación individual."
-          text: Por orden de preparación (A, B, C, etc.) cada jugador sigue los pasos de preparación de su tablero de facción, descritos tanto en las reglas como en el reverso de su tablero de facción. _(El orden se verá alterado si jugáis con reglas de preparación avanzada.)_
+        - name: "Paso 1: Asignar Facciones y Jugador Inicial"
+          text: Asigna una facción a cada jugador usando cualquier método. Determina al azar el orden de asiento y el jugador inicial, el orden de turno va hacia su izquierda. Cada jugador toma su tablero de facción y todas sus piezas, tal y como se describe en la parte trasera del mismo.
+        - name: "Paso 2: Colocar Marcadores de Puntuación."
+          text: Cada jugador coloca su marcador de puntuación en la casilla "0" del contador.
+        - name: "Paso 3: Robar Manos Iniciales."
+          text: Si estáis jugando dos jugadores, quita las cuatro cartas de dominancia del mazo. Baraja el mazo. Cada jugador roba tres cartas.
+        - name: "Paso 4: Colocar Ruinas."
+          text: Coloca una ficha de ruina en cada espacio del mapa marcado con una "R" _(cuatro en total)_.
+        - name: "Paso 5: Formar la Reserva común de Objetos."
+          text: "Coloca estos objetos en los espacios correspondientes de la reserva de objetos de la parte superior del mapa: 2 `item:boot`, 2 `item:sack`, 1 `item:crossbow`, 1 `item:hammer`, 2 `item:sword`, 2 `item:tea`, 2 `item:coin`."
+        - name: "Paso 6: Otras Piezas."
+          text: Reparte las cartas de resumen de facción según se necesiten, después coloca los dos dados junto al mapa.
+        - name: "Paso 7: Preparación Individual."
+          text: En orden de preparación (A, B, C, etc.) cada jugador sigue las instrucciones de preparación de la sección de reglas que está en la parte trasera de su tablero.
+
+    - name: Alcance
+      pretext: Para preparar un juego compensado, escoge facciones cuyos valores de **alcance** sean al menos el valor total de alcance recomendado para el número de jugadores. _(Los jugadores más osados pueden usar cualquier combinación de facciones con un Alcance de 17+)_. Para ver el Alcance recomendado para tu número de jugadores, pulsa el icono de Calculadora en la parte superior derecha de la app.
 
 - name: El Marquesado
   color: "#e07a37"
