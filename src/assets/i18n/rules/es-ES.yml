@@ -443,36 +443,37 @@
   icon: vagabond
   children:
     - name: Resumen
-      pretext: El Vagabundo juega con todos los bandos de este conflicto, mientras lleva a cabo sus propias misiones para aumentar su reputación. Cada vez que el Vagabundo mejora su  **relación** con otra facción o retira un guerrero de una facción Hostil, obtiene puntos de victoria. También puede obtener puntos de victoria completando sus **misiones**. Para moverse y realizar acciones, el Vagabundo deberá gestionar adecuadamente sus  **objetos**, procurando expandir su equipamiento mediante la exploración de las ruinas del bosque y ayudando a otras facciones.
+      pretext: El Vagabundo puede apoyar a todos los bandos de este conflicto, al tiempo que lleva a cabo misiones para incrementar su reputación. Cada vez que mejoras tu **relación** con otra facción, o bien quitas un guerrero que pertenece a una facción hostil, obtienes puntos de victoria. También puedes completar **misiones** para obtener puntos de victoria. Para mover y actuar de forma efectiva con el Vagabundo debes gestionar tu hatillo de **objetos**, expandiendo tu colección al explorar las ruinas en los claros y ayudar a otras facciones.
     
     - name: Reglas y Habilidades de Facción
       children:
         - name: Fabricar.
-          text: Para fabricar objetos, el Vagabundo debe agotar `item:hammer`. Todos sus `item:hammer` siempre corresponden al palo en que esté situado el Vagabundo. Si fabrica un objeto, el Vagabundo toma el objeto de la reserva y lo coloca en su tablero bocarriba de forma inmediata.
-        - name: Errante solitario.
-          text: El Peón del Vagabundo no es un guerrero _(por lo que no cuenta a efectos de gobernar claros)._ El Peón del Vagabundo no puede ser retirado del mapa.
+          text: El Vagabundo agota `item:hammer` para fabricar. Todos sus `item:hammer` son correspondientes a su claro actual. Si el Vagabundo fabrica un objeto, puede tomarlo inmediatamente, bocarriba.
+        - name: Errante y Solitario.
+          text: El Peón del Vagabundo no es un guerrero, así que no puede gobernar un claro o impedir que otro jugador gobierne uno. El peón de Vagabundo no puede retirarse del mapa.
           subchildren:
-            - name: Efectos de retirada total.
-              text: Cuando un jugador enemigo juegue un efecto que indique que se deben retirar todas las piezas enemigas de un claro _(como las revueltas de la Alianza, las cartas de Favor o las bombas de la Conspiración de los Córvidos)_ en el claro donde esté el Vagabundo, el Vagabundo debe dañar tres objetos.
+            - name: Retirada Total.
+              text: Cuando un jugador enemigo utilice un efecto que indique que se retiran todas las piezas enemigas de un claro _(como una revuelta de la Alianza, una carta del Favor de los Ratones o una bomba de los Córvidos)_ en el que está el Vagabundo, el Vagabundo daña tres de sus objetos a su elección.
 
         - name: Grácil.
-          text: El Vagabundo puede mover independientemente de quién gobierne el claro de origen o de destino.(`rule:4.2.1`).
+          text: El Vagabundo puede moverse independientemente de quién gobierne su claro de origen o de destino.(`rule:4.2.1`).
         - name: Indefenso.
-          text: En batalla, el Vagabundo está indefenso (`rule:4.3.2.3`) si no tiene ninguna `item:sword` no dañada.
+          text: En batalla, el Vagabundo está indefenso (`rule:4.3.2.3`) si no tiene `item:sword` no dañadas.
         - name: Objetos.
-          text: El potencial de acción del Vagabundo depende de los objetos que obtenga. Los objetos del Vagabundo pueden estar bocarriba o bocabajo su el tablero. Para realizar acciones Vagabundo **agota** sus objetos no dañados y no agotados, volteándolos bocabajo _(a su reverso de color oscuro)_.
+          text: Las capacidades del Vagabundo depende de los objetos que tenga. En lugar de una zona para Objetos Fabricados tiene un Hatillo y varios contadores. Los objetos en el tablero de facción del Vagabundo pueden estar bocarriba o bocabajo. El Vagabundo **agota** objetos no dañados, volteándolos bocabajo, para hacer muchas de sus acciones
           subchildren:
-            - name: Contadores de objetos.
-              text: Al obtener `item:tea`, `item:coin`, and `item:sack`, estos se colocan sobre las casillas de sus respectivos contadores. Cada contador puede contener un máximo de tres objetos de ese tipo.
-            - name: Hatillo.
-              text: Al obtenerlos, las `item:boot`, `item:sword`, `item:crossbow`, `item:torch`, y los `item:hammer` deben colocarse bocarriba en el Hatillo del Vagabundo.
-            - name: Mover objetos.
-              text: El Vagabundo puede intercambiar libremente sus  `item:tea`, `item:coin`, y `item:sack` no dañados bocarriba de sus contadores a su Hatillo.
-        - name: Impactos máximos por dados en batalla.
-          text: En batalla, el Vagabundo solo puede infligir tantos impactos por dados (`rule:4.3.2.1`) como `item:sword` no dañadas tenga en su Hatillo, tanto  tanto bocarriba como bocabajo _(los impactos adicionales que puedan causar otros efectos se suman después)_.
-        - name: Recibir impactos.
-          text: Cuando el Vagabundo recibe un impacto (`rule:4.3.3`), debe dañar un objeto no dañado, trasladándolo a su casilla de objetos dañados. En caso de que no queden objetos por dañar, el Vagabundo ignora los impactos restantes.
-        - name: Cartas de Dominancia y coaliciones.
+            - name: Contadores.
+              text: Al obtenerlos o al voltearlos bocarriba, coloca `item:tea`, `item:coin`, y `item:sack` bocarriba en sus contadores. Cada contador puede tener hasta 3 objetos del mismo tipo.
+            - name: El Hatillo.
+              text: Al obtenerlos, coloca `item:boot`, `item:sword`, `item:crossbow`, `item:torch`, y `item:hammer` bocarriba en el hatillo.
+            - name: Mover Objetos.
+              text: El Vagabundo puede mover libremente `item:tea`, `item:coin`, y `item:sack` entrer sus contadores y el hatillo, siempre y cuando estén bocarriba y no dañados.
+        - name: Golpes Máximos por Tirada.
+          text: En batalla, sus golpes máximos por tirada (`rule:4.3.2.1`) son iguales a sus `item:sword` no dañadas, bocarriba o bocabajo, en su hatillo.
+        - name: Recibir Golpes.
+          text: Cuando el Vagabundo recibe un golpe (`rule:4.3.3`), debe dañar uno de sus objetos no dañados, moviéndolo a su zona de dañados. Si no le quedan objetos no dañados, el Vagabundo ignora cualquier golpe restante.
+          TODO
+        - name: Cartas de Dominancia y Coaliciones.
           text: En partidas de 4 o más jugadores, el Vagabundo puede activar una carta de Dominancia para formar una coalición con el jugador con menos puntos de victoria (sin contarse a sí mismo), indicándolo colocando para ello su contador de puntos de victoria en el tablero de la facción coaliada. En caso de que hubiera un empate entre facciones, entonces el Vagabundo decide con quién coaliarse. Si dicho jugador coaliado gana la partida, el Vagabundo también ganará. _(Al hacer esto, el Vagabundo ya no sumará puntos de victoria. No es posible formar una coalición con un jugador que haya jugado una carta de dominancia, puesto que este tampoco aspira a ganar por puntos)_
         - name: Relaciones.
           text: El tablero de facción del Vagabundo muestra una tabla de Relaciones, que muestra un contador de Aliado con cuatro espacios y una casilla con la denominación de Hostil. En esta tabla se coloca un marcador de relación para cada facción en juego que no sea un Vagabundo.
